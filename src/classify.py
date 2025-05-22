@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 import cv2
 
-model = tf.keras.models.load_model("models/Dribya_Dristi.h5")
+model = tf.keras.models.load_model("newmodel/Dribya_Dristi.h5")
 class_labels = label = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'del', 'nothing', 'space']
 # with open("models\class_names.txt", "r") as f:
 #     class_labels = f.read().splitlines()
