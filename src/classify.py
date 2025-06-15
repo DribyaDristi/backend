@@ -13,10 +13,10 @@ def classify_image(image):
     
     # Convert to grayscale if model expects single channel
     image_gray = cv2.cvtColor(image_resized, cv2.COLOR_BGR2GRAY)
-    image_gray = np.expand_dims(image_gray, axis=-1)  # (64, 64, 1)
+    image_gray = np.expand_dims(image_gray, axis=-1)  
 
     image_norm = image_gray.astype("float32") / 255.0
-    input_data = np.expand_dims(image_norm, axis=0)   # (1, 64, 64, 1)
+    input_data = np.expand_dims(image_norm, axis=0)  
 
     prediction = model.predict(input_data)
     label_index = np.argmax(prediction, axis=1)[0]
