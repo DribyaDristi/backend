@@ -2,7 +2,7 @@ import cv2
 from matplotlib import pyplot as plt
 import numpy as np
 import tensorflow as tf
-from hand_detector import get_hand_crop
+from alphabet.hand_detector import get_hand_crop
 
 # Load the trained model
 model = tf.keras.models.load_model("newmodel/Dribya_Dristi.h5")
