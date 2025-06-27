@@ -1,0 +1,123 @@
+### Home & Places ###
+house
+room
+bathroom
+car
+
+### People & Identity ###
+i
+me
+you
+man
+woman
+boy
+girl
+baby
+student
+teacher
+name
+deaf
+
+### Communication & Expression ###
+say
+hello
+thankyou
+please
+sorry
+shhh
+help
+text
+ask
+pay attention
+look / see / watch
+forget
+understand
+love it
+nice to meet you
+
+### Emotions & States ###
+happy
+sad
+busy
+fine
+good
+same
+
+### Actions & Verbs ###
+go
+come
+walk
+give
+cook
+clean
+finish
+work
+sleep
+play
+draw
+write
+learn
+know
+ask
+test
+
+### Food & Drink ###
+milk
+icecream
+candy
+drink
+eat / food
+water
+hungry
+cook
+buy
+
+### Desire & Necessity ###
+want
+need
+like
+more
+not / doesn't
+no
+yes
+right
+wrong
+haven't / not yet
+
+### Learning & School ###
+book
+class
+student
+teacher
+test
+learn
+know
+write
+draw
+ask
+
+### Colors ###
+black
+blue
+brown
+green
+red
+white
+
+### Questions ###
+who
+what
+where
+how
+
+### Time & Frequency ###
+always
+never
+time
+yesterday
+today
+tomorrow
+
+### Animals ###
+cat
+bird
