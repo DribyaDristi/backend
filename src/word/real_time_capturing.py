@@ -12,12 +12,12 @@ import tensorflow.lite as tflite
 load_dotenv()
 
 # Initialize the TensorFlow Lite interpreter
-interpreter = tflite.Interpreter("./model.tflite")
+interpreter = tflite.Interpreter("C:/Users/Acer/Desktop/DribhyaDrishti/src/word/model.tflite")
 interpreter.allocate_tensors()
 pred_fn = interpreter.get_signature_runner("serving_default")
 
 # Load training data
-train = pd.read_csv("train.csv")
+train = pd.read_csv("C:/Users/Acer/Desktop/DribhyaDrishti/src/word/train.csv")
 train['sign_ord'] = train['sign'].astype('category').cat.codes
 SIGN2ORD = train[['sign', 'sign_ord']].set_index('sign').squeeze().to_dict()
 ORD2SIGN = train[['sign_ord', 'sign']].set_index('sign_ord').squeeze().to_dict()
@@ -103,7 +103,7 @@ def load_relevant_data_subset(pq_path):
 
 def do_capture_loop(xyz, pred_fn):
     all_landmarks = []
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("03238.mp4")
     # cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
     # cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
     # cap.set(cv2.CAP_PROP_FPS, 30)
@@ -135,7 +135,7 @@ def do_capture_loop(xyz, pred_fn):
     unique_signs = []
     sign_name = ""
 
-    with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
+    with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5, model_complexity=1) as holistic:
         while cap.isOpened():
             current_time = time.time()
             elapsed_time = int(current_time - start_time)
@@ -174,8 +174,8 @@ def do_capture_loop(xyz, pred_fn):
             if current_time - last_prediction_time >= 3:
                 if all_landmarks:
                     concatenated_landmarks = pd.concat(all_landmarks).reset_index(drop=True)
-                    concatenated_landmarks.to_parquet("output.parquet")
-                    xyz_np = load_relevant_data_subset("output.parquet")
+                    concatenated_landmarks.to_parquet("C:/Users/Acer/Desktop/DribhyaDrishti/src/word/output.parquet")
+                    xyz_np = load_relevant_data_subset("C:/Users/Acer/Desktop/DribhyaDrishti/src/word/output.parquet")
                     p = pred_fn(inputs=xyz_np)
                     sign = p['outputs'].argmax()
                     sign_name = ORD2SIGN[sign]
@@ -217,7 +217,7 @@ def do_capture_loop(xyz, pred_fn):
     cv2.destroyAllWindows()
 
 # Load data and start capture loop
-pq_file = "output.parquet"
+pq_file = "C:/Users/Acer/Desktop/DribhyaDrishti/src/word/output.parquet"
 xyz = pd.read_parquet(pq_file)
 do_capture_loop(xyz, pred_fn)
 
