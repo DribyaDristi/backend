@@ -2,4 +2,4 @@ asl_alphabet_test
 *.zip
 asl_alphabet_test.zip
 mp-env/
-model-train/
+model_train/
