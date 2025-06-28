@@ -5,8 +5,17 @@ from tensorflow.keras.models import load_model
 import tensorflow as tf
 from scipy import stats
 # Load the model
-model = load_model('/home/notme/Programs/backend/src/word/test.h5')
-actions = np.array(['book','buy','candy','drink','eat','hungry','icecream','like','milk','more','no','not','right','want','wrong','yes']) 
+model = load_model('/home/notme/Programs/backend/src/word/collective.h5')
+actions = np.array( [
+    "always", "ask", "bathroom", "bird", "black", "blue", "book", "brown", "busy", "buy",
+    "candy", "car", "cat", "clean", "come", "cook", "deaf", "draw", "drink", "eat",
+    "fine", "finish", "forget", "give", "go", "good", "green", "happy", "hello", "help",
+    "house", "how", "hungry", "i", "icecream", "know", "learn", "like", "love_it", "man",
+    "milk", "more", "name", "never", "no", "not", "pay_attention", "play", "please", "red",
+    "right", "room", "sad", "same", "say", "see", "shhh", "sleep", "sorry", "test", "text",
+    "thankyou", "time", "today", "tomorrow", "understand", "walk", "want", "water", "what",
+    "where", "white", "who", "woman", "work", "write", "wrong", "yes", "yesterday", "you"
+]) 
 
 # 1. New detection variables
 sequence = []
