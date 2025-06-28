@@ -5,18 +5,15 @@ bathroom
 car
 
 ### People & Identity ###
-i
-me
+i / me
 you
 man
 woman
-boy
-girl
-baby
-student
-teacher
-name
+# boy
+# girl
+# baby
 deaf
+name
 
 ### Communication & Expression ###
 say
@@ -27,13 +24,12 @@ sorry
 shhh
 help
 text
-ask
 pay attention
 look / see / watch
 forget
 understand
 love it
-nice to meet you
+# nice to meet you
 
 ### Emotions & States ###
 happy
@@ -69,12 +65,11 @@ drink
 eat / food
 water
 hungry
-cook
 buy
 
 ### Desire & Necessity ###
 want
-need
+# need
 like
 more
 not / doesn't
@@ -82,19 +77,13 @@ no
 yes
 right
 wrong
-haven't / not yet
+# haven't / not yet
 
 ### Learning & School ###
 book
-class
-student
-teacher
-test
-learn
-know
-write
-draw
-ask
+# class
+# student
+# teacher
 
 ### Colors ###
 black
