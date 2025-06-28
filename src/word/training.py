@@ -5,8 +5,8 @@ from tensorflow.keras.models import load_model
 import tensorflow as tf
 from scipy import stats
 # Load the model
-model = load_model('C:/Users/Acer/Desktop/DribhyaDrishti/src/word/action2.h5')
-actions = np.array(['go', 'come', 'walk', 'give', 'cook', 'clean', 'finish', 'work', 'sleep', 'play', 'draw', 'write', 'learn', 'know', 'ask', 'test', 'house', 'room', 'bathroom', 'car'])
+model = load_model('/home/notme/Programs/backend/src/word/test.h5')
+actions = np.array(['book','buy','candy','drink','eat','hungry','icecream','like','milk','more','no','not','right','want','wrong','yes']) 
 
 # 1. New detection variables
 sequence = []
