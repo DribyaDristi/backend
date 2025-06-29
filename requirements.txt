@@ -1,3 +1,6 @@
-numpy>=1.26.0
-opencv-python>=4.8.1.78
-tensorflow>=2.19.0
+numpy
+pandas
+mediapipe
+scikit-learn
+opencv-python
+tensorflow

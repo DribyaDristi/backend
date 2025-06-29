@@ -23,7 +23,7 @@ def decode(value):
     return inv_map.get(value, "Unknown")
 
 
-model_path = r"C:/Users/Acer/Desktop/DribhyaDrishti/newmodel/Dribya_Dristi.h5"
+model_path = "/home/sanjib/Desktop/backend/newmodel/Dribya_Dristi.h5"
 try:
     model = tf.keras.models.load_model(model_path)
     print("Model loaded successfully!")

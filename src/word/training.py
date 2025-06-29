@@ -4,8 +4,9 @@ import mediapipe as mp
 from tensorflow.keras.models import load_model
 import tensorflow as tf
 from scipy import stats
+
 # Load the model
-model = load_model('/home/notme/Programs/backend/src/word/collective.h5')
+model = load_model('/home/sanjib/Desktop/backend/src/word/collective.h5')
 actions = np.array( [
     "always", "ask", "bathroom", "bird", "black", "blue", "book", "brown", "busy", "buy",
     "candy", "car", "cat", "clean", "come", "cook", "deaf", "draw", "drink", "eat",
@@ -22,9 +23,6 @@ sequence = []
 sentence = []
 predictions = []
 threshold = 0.5
-
-mp_holistic = mp.solutions.holistic
-mp_drawing = mp.solutions.drawing_utils
 
 colors = []
 # create colors for each action
